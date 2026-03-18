@@ -91,40 +91,48 @@
         /* ── NAVBAR ── */
         nav{
             position:fixed;top:0;width:100%;z-index:1000;
-            background:rgba(13,27,62,.97);backdrop-filter:blur(12px);
-            border-bottom:3px solid var(--red);
-            padding:0 2rem;height:68px;
+            background:linear-gradient(90deg,rgba(8,15,34,.98) 0%,rgba(13,27,62,.98) 50%,rgba(8,15,34,.98) 100%);
+            backdrop-filter:blur(16px);
+            border-bottom:2px solid transparent;
+            border-image:linear-gradient(90deg,transparent,var(--gold),var(--red),var(--gold),transparent) 1;
+            padding:0 2rem;height:72px;
             display:flex;align-items:center;justify-content:space-between;
-            transition:box-shadow .3s;
+            transition:box-shadow .3s,background .3s;
         }
-        nav.scrolled{box-shadow:0 4px 30px rgba(0,0,0,.4);}
-        .nav-brand{display:flex;align-items:center;gap:10px;text-decoration:none;}
-        .nav-brand-circle{
-            width:44px;height:44px;background:var(--red);border-radius:50%;
-            display:flex;align-items:center;justify-content:center;
-            font-weight:900;font-size:.9rem;color:#fff;
-            border:2px solid var(--gold);flex-shrink:0;
+        nav.scrolled{box-shadow:0 4px 40px rgba(0,0,0,.6);}
+        .nav-brand{display:flex;align-items:center;gap:12px;text-decoration:none;}
+        .nav-brand-logo{
+            width:52px;height:52px;flex-shrink:0;
+            filter:drop-shadow(0 0 8px rgba(240,192,64,.4));
+            transition:.3s;
         }
-        .nav-brand-text{color:#fff;font-weight:700;font-size:1rem;line-height:1.25;}
-        .nav-brand-text small{display:block;font-size:.6rem;color:var(--gold);font-weight:400;letter-spacing:2px;}
-        .nav-links{display:flex;gap:.1rem;list-style:none;}
+        .nav-brand:hover .nav-brand-logo{filter:drop-shadow(0 0 14px rgba(240,192,64,.7));transform:scale(1.06);}
+        .nav-brand-text{color:#fff;font-weight:800;font-size:1rem;line-height:1.2;}
+        .nav-brand-text small{display:block;font-size:.58rem;color:var(--gold);font-weight:500;letter-spacing:2.5px;text-transform:uppercase;}
+        .nav-links{display:flex;gap:0;list-style:none;}
         .nav-links a{
-            color:rgba(255,255,255,.75);text-decoration:none;font-size:.82rem;font-weight:500;
-            padding:.45rem .75rem;border-radius:6px;transition:.25s;letter-spacing:.3px;
+            color:rgba(255,255,255,.7);text-decoration:none;font-size:.8rem;font-weight:500;
+            padding:.4rem .7rem;border-radius:6px;transition:.22s;letter-spacing:.3px;position:relative;
         }
-        .nav-links a:hover,.nav-links a.active{color:#fff;background:var(--red);}
+        .nav-links a::after{content:'';position:absolute;bottom:2px;left:50%;right:50%;height:2px;background:var(--gold);border-radius:2px;transition:.22s;}
+        .nav-links a:hover{color:#fff;background:rgba(255,255,255,.06);}
+        .nav-links a:hover::after,.nav-links a.active::after{left:10%;right:10%;}
+        .nav-links a.active{color:#fff;}
         .nav-kayit{
             display:flex;align-items:center;gap:.4rem;
-            background:var(--gold);color:var(--navy)!important;font-size:.8rem;font-weight:800;
-            text-decoration:none;padding:.4rem 1rem;border-radius:20px;transition:.2s;
-            letter-spacing:.3px;
+            background:linear-gradient(135deg,var(--gold),#e6a800);
+            color:var(--navy)!important;font-size:.78rem;font-weight:800;
+            text-decoration:none;padding:.42rem 1.1rem;border-radius:20px;transition:.2s;
+            letter-spacing:.3px;box-shadow:0 2px 12px rgba(240,192,64,.35);
         }
-        .nav-kayit:hover{background:#fff;transform:scale(1.04);}
+        .nav-kayit:hover{background:linear-gradient(135deg,#fff,#f0e0a0);transform:scale(1.05);box-shadow:0 4px 20px rgba(240,192,64,.5);}
         .nav-phone{
             display:flex;align-items:center;gap:.4rem;
-            color:var(--gold);font-size:.82rem;font-weight:600;text-decoration:none;
+            color:var(--gold);font-size:.8rem;font-weight:600;text-decoration:none;
+            transition:.2s;
         }
-        .nav-right{display:flex;align-items:center;gap:1rem;}
+        .nav-phone:hover{color:#fff;filter:brightness(1.2);}
+        .nav-right{display:flex;align-items:center;gap:.9rem;}
         .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;}
         .hamburger span{display:block;width:24px;height:2.5px;background:#fff;border-radius:3px;transition:.3s;}
         .hamburger.open span:nth-child(1){transform:translateY(7.5px) rotate(45deg);}
@@ -772,7 +780,8 @@
 <!-- NAVBAR -->
 <nav id="nav">
     <a href="#hero" class="nav-brand">
-        <div class="nav-brand-circle">DPÜ</div>
+        <img src="amblem.png" alt="DPÜ Spor Kulübü" class="nav-brand-logo"
+             onerror="this.style.display='none';this.insertAdjacentHTML('afterend','<div style=\'width:52px;height:52px;background:linear-gradient(135deg,#06b6d4,#0d1b3e);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:.85rem;color:#fff;border:2px solid #f0c040;\'>DPÜ</div>')">
         <div class="nav-brand-text">
             DPÜ Spor Kulübü
             <small>DUMLUPINAR ÜNİVERSİTESİ</small>
