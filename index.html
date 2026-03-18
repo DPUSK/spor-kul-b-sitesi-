@@ -591,6 +591,33 @@
         .brans-cb:has(input:checked)::before{background:var(--red);border-color:var(--red);content:'✓';color:white;display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:900;}
         @media(max-width:480px){.brans-checkboxes{grid-template-columns:1fr;}}
 
+        /* ── GALERİ FİLTRE ── */
+        .galeri-filter{padding:.45rem 1.1rem;border:2px solid #e0e0e0;border-radius:20px;background:white;font-size:.82rem;font-weight:700;cursor:pointer;transition:.2s;color:#555;}
+        .galeri-filter:hover,.galeri-filter.active{background:#0d1b3e;color:white;border-color:#0d1b3e;}
+        .gitem{transition:opacity .3s,transform .3s;}
+        .gitem.hidden{display:none;}
+
+        /* ── TESİSLER ── */
+        .tesis-card{background:white;border-radius:16px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.08);transition:.3s;}
+        .tesis-card:hover{transform:translateY(-6px);box-shadow:0 12px 40px rgba(0,0,0,.13);}
+        .tesis-img{height:200px;overflow:hidden;position:relative;}
+        .tesis-img img{width:100%;height:100%;object-fit:cover;transition:.4s;}
+        .tesis-card:hover .tesis-img img{transform:scale(1.05);}
+        .tesis-placeholder{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:3.5rem;gap:.5rem;}
+        .tesis-body{padding:1.3rem;}
+        .tesis-body h3{font-size:1rem;font-weight:800;color:#0d1b3e;margin-bottom:.5rem;}
+        .tesis-body p{font-size:.83rem;color:#666;line-height:1.7;}
+
+        /* ── S.S.S ── */
+        .sss-item{border:1px solid #e8e8e8;border-radius:12px;margin-bottom:.8rem;overflow:hidden;background:white;}
+        .sss-q{display:flex;justify-content:space-between;align-items:center;padding:1.1rem 1.3rem;cursor:pointer;font-weight:700;font-size:.92rem;color:#0d1b3e;gap:1rem;transition:.2s;}
+        .sss-q:hover{background:#f8f9fa;}
+        .sss-q.open{background:#0d1b3e;color:white;}
+        .sss-icon{font-size:1.4rem;font-weight:300;flex-shrink:0;transition:.3s;}
+        .sss-q.open .sss-icon{transform:rotate(45deg);}
+        .sss-a{max-height:0;overflow:hidden;transition:max-height .35s ease,padding .3s;font-size:.87rem;color:#555;line-height:1.8;padding:0 1.3rem;}
+        .sss-a.open{max-height:300px;padding:1rem 1.3rem;}
+
         /* ── FOOTER ── */
         footer{background:#05091a;color:rgba(255,255,255,.45);padding:3.5rem 2rem 1.5rem;}
         .footer-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;padding-bottom:3rem;border-bottom:1px solid rgba(255,255,255,.08);}
@@ -748,11 +775,14 @@
         <li><a href="#duyurular">Duyurular</a></li>
         <li><a href="#takvim">Takvim</a></li>
         <li><a href="#antrenorler">Antrenörler</a></li>
+        <li><a href="#tesisler">Tesisler</a></li>
         <li><a href="#galeri">Galeri</a></li>
+        <li><a href="#sss">S.S.S</a></li>
         <li><a href="#iletisim">İletişim</a></li>
     </ul>
     <div class="nav-right">
         <a href="#iletisim" class="nav-kayit">📋 Kayıt Ol</a>
+        <a href="https://www.instagram.com/dpusporkulubu" target="_blank" class="nav-phone" style="color:#f0c040;">📷 Instagram</a>
         <a href="tel:05380738864" class="nav-phone">📞 0538 073 88 64</a>
         <div class="hamburger" id="ham" onclick="toggleMenu()">
             <span></span><span></span><span></span>
@@ -775,8 +805,7 @@
             Kütahya'nın Lider Spor Kulübü
         </div>
         <div class="hero-logo">DPÜ</div>
-        <h1 class="hero-title">Dumlupınar<br><span class="accent">Spor Kulübü</span></h1>
-        <p class="hero-sub">Üniversitesi</p>
+        <h1 class="hero-title">Dumlupınar Üniversitesi<br><span class="accent">Spor Kulübü</span></h1>
         <p class="hero-slogan">"Kütahya'nın en çok branşta eğitim veren spor kulübü"</p>
         <div class="hero-stats">
             <div class="stat-item">
@@ -1041,6 +1070,79 @@
     </div>
 </section>
 
+<!-- BAŞKANIN MESAJI -->
+<section id="baskan-mesaji" style="background:linear-gradient(135deg,#0d1b3e 0%,#1a3a6e 100%);padding:5rem 2rem;">
+    <div class="container">
+        <div style="max-width:860px;margin:0 auto;display:flex;gap:3rem;align-items:center;flex-wrap:wrap;">
+            <div style="flex-shrink:0;text-align:center;">
+                <div style="width:150px;height:150px;border-radius:50%;border:4px solid #f0c040;overflow:hidden;margin:0 auto;">
+                    <img src="baskan.jpg" alt="Doç. Dr. Osman Tolga Şinoforoğlu"
+                        style="width:100%;height:100%;object-fit:cover;object-position:center top;"
+                        onerror="this.style.display='none';this.parentElement.style.background='#1a3a6e';this.parentElement.innerHTML+='<div style=\'display:flex;align-items:center;justify-content:center;height:100%;font-size:4rem;\'>👨‍💼</div>'">
+                </div>
+                <div style="color:#f0c040;font-size:.75rem;font-weight:800;letter-spacing:2px;margin-top:1rem;text-transform:uppercase;">Başkan & Baş Antrenör</div>
+                <div style="color:white;font-weight:700;margin-top:.3rem;font-size:.95rem;">Doç. Dr. Osman Tolga Şinoforoğlu</div>
+            </div>
+            <div style="flex:1;min-width:280px;">
+                <div style="color:#f0c040;font-size:.8rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;margin-bottom:1rem;">Başkanımızın Mesajı</div>
+                <blockquote style="color:rgba(255,255,255,.92);font-size:1.05rem;line-height:1.9;font-style:italic;border-left:3px solid #f0c040;padding-left:1.5rem;margin:0;">
+                    "Dumlupınar Üniversitesi Spor Kulübü olarak amacımız; sporun sadece bir aktivite değil, bir yaşam biçimi olduğunu gençlerimize ve topluma göstermektir. Her branşta bilimsel temelli antrenman programlarıyla sporcularımızın hem fiziksel hem de kişisel gelişimlerine katkı sağlıyoruz. Kütahya'mıza ve ülkemize değer katacak nesiller yetiştirmek en büyük motivasyonumuz."
+                </blockquote>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- TESİSLER -->
+<section id="tesisler" style="background:#f8f9fa;padding:5rem 2rem;">
+    <div class="container">
+        <div class="sec-head">
+            <div class="sec-tag">Altyapı</div>
+            <h2 class="sec-title">Tesisle<span class="accent">rimiz</span></h2>
+            <div class="sec-line"></div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.5rem;">
+            <div class="tesis-card reveal">
+                <div class="tesis-img" id="tesis-havuz">
+                    <div class="tesis-placeholder" style="background:linear-gradient(135deg,#0066cc,#00b4d8)">🏊</div>
+                </div>
+                <div class="tesis-body">
+                    <h3>Olimpik Yüzme Havuzu</h3>
+                    <p>25 metrelik kapalı olimpik yüzme havuzu. Profesyonel filtre sistemi ve ısıtma altyapısıyla yıl boyu kullanıma açık.</p>
+                </div>
+            </div>
+            <div class="tesis-card reveal">
+                <div class="tesis-img" id="tesis-salon">
+                    <div class="tesis-placeholder" style="background:linear-gradient(135deg,#c8102e,#ff6b35)">🏀</div>
+                </div>
+                <div class="tesis-body">
+                    <h3>Çok Amaçlı Spor Salonu</h3>
+                    <p>Basketbol, voleybol ve jimnastik branşlarına ev sahipliği yapan modern spor salonu. Soyunma odaları ve tribünüyle tam donanımlı.</p>
+                </div>
+            </div>
+            <div class="tesis-card reveal">
+                <div class="tesis-img" id="tesis-tenis">
+                    <div class="tesis-placeholder" style="background:linear-gradient(135deg,#2e7d32,#66bb6a)">🎾</div>
+                </div>
+                <div class="tesis-body">
+                    <h3>Tenis Kortları</h3>
+                    <p>DPÜ yerleşkesinde profesyonel zemin yapısına sahip tenis kortları. Hem bireysel hem grup antrenmanlarına uygun altyapı.</p>
+                </div>
+            </div>
+            <div class="tesis-card reveal">
+                <div class="tesis-img" id="tesis-pilates">
+                    <div class="tesis-placeholder" style="background:linear-gradient(135deg,#004d40,#26a69a)">🧘</div>
+                </div>
+                <div class="tesis-body">
+                    <h3>Pilates & Zumba Stüdyosu</h3>
+                    <p>Modern reformer cihazları ve geniş dans alanıyla donatılmış stüdyo. Pilates, zumba ve masa tenisi branşlarına hizmet vermektedir.</p>
+                </div>
+            </div>
+        </div>
+        <p style="text-align:center;color:#aaa;font-size:.78rem;margin-top:2rem;">* Tesis fotoğrafları yakında eklenecektir.</p>
+    </div>
+</section>
+
 <!-- BAŞARILAR -->
 <section id="basarilar">
     <div class="container">
@@ -1296,29 +1398,104 @@
 <section id="galeri">
     <div class="container">
         <div class="sec-head">
-            <div class="sec-tag">Fotoğraflar</div>
+            <div class="sec-tag">Fotoğraflar & Videolar</div>
             <h2 class="sec-title">Gale<span class="accent">ri</span></h2>
             <div class="sec-line"></div>
         </div>
-        <div class="galeri-grid">
-            <!-- Yüzme Fotoğrafları -->
-            <div class="gitem reveal" onclick="openLb(this)"><img src="yuzme1.jpg" alt="DPÜ Yüzme Antrenmanı"><div class="g-overlay">🔍</div></div>
-            <div class="gitem reveal" onclick="openLb(this)"><img src="yuzme2.jpg" alt="DPÜ Yüzme"><div class="g-overlay">🔍</div></div>
-            <div class="gitem reveal" onclick="openLb(this)"><img src="yuzme3.jpg" alt="DPÜ Yüzme"><div class="g-overlay">🔍</div></div>
-            <div class="gitem reveal" onclick="openLb(this)"><img src="yuzme4.jpg" alt="DPÜ Yüzme"><div class="g-overlay">🔍</div></div>
-            <div class="gitem reveal" onclick="openLb(this)"><img src="yuzme5.jpg" alt="DPÜ Yüzme Sporcuları"><div class="g-overlay">🔍</div></div>
-            <div class="gitem reveal" onclick="openLb(this)"><img src="yuzme6.jpg" alt="DPÜ Yüzme Antrenmanı"><div class="g-overlay">🔍</div></div>
-            <div class="gitem reveal" onclick="openLb(this)"><img src="yuzme7.jpg" alt="DPÜ Yüzme Sporcuları"><div class="g-overlay">🔍</div></div>
-            <div class="gitem reveal" onclick="openLb(this)"><img src="yuzme8.jpg" alt="DPÜ Yüzme Çalışması"><div class="g-overlay">🔍</div></div>
-            <!-- Diğer Branşlar -->
-            <div class="gitem reveal"><div class="gplaceholder" style="background:linear-gradient(135deg,#c8102e,#ff6b35)"><div class="gico">🏀</div><span>Basketbol</span></div><div class="g-overlay">🔍</div></div>
-            <div class="gitem reveal"><div class="gplaceholder" style="background:linear-gradient(135deg,#0d1b3e,#1a3a6e)"><div class="gico">🏐</div><span>Voleybol</span></div><div class="g-overlay">🔍</div></div>
-            <div class="gitem reveal"><div class="gplaceholder" style="background:linear-gradient(135deg,#2e7d32,#66bb6a)"><div class="gico">🎾</div><span>Tenis</span></div><div class="g-overlay">🔍</div></div>
-            <div class="gitem reveal"><div class="gplaceholder" style="background:linear-gradient(135deg,#6a1b9a,#ab47bc)"><div class="gico">🏓</div><span>Masa Tenisi</span></div><div class="g-overlay">🔍</div></div>
+        <!-- FİLTRE -->
+        <div style="display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center;margin-bottom:2rem;">
+            <button class="galeri-filter active" onclick="filterGaleri('tumu',this)">Tümü</button>
+            <button class="galeri-filter" onclick="filterGaleri('yuzme',this)">🏊 Yüzme</button>
+            <button class="galeri-filter" onclick="filterGaleri('basketbol',this)">🏀 Basketbol</button>
+            <button class="galeri-filter" onclick="filterGaleri('voleybol',this)">🏐 Voleybol</button>
+            <button class="galeri-filter" onclick="filterGaleri('tenis',this)">🎾 Tenis</button>
+            <button class="galeri-filter" onclick="filterGaleri('masatenisi',this)">🏓 Masa Tenisi</button>
+            <button class="galeri-filter" onclick="filterGaleri('pilates',this)">🧘 Pilates</button>
+            <button class="galeri-filter" onclick="filterGaleri('zumba',this)">💃 Zumba</button>
+            <button class="galeri-filter" onclick="filterGaleri('jimnastik',this)">🤸 Jimnastik</button>
+        </div>
+        <div class="galeri-grid" id="galeriGrid">
+            <div class="gitem reveal" data-brans="yuzme" onclick="openLb(this)"><img src="yuzme1.jpg" alt="DPÜ Yüzme Antrenmanı"><div class="g-overlay">🔍</div></div>
+            <div class="gitem reveal" data-brans="yuzme" onclick="openLb(this)"><img src="yuzme2.jpg" alt="DPÜ Yüzme"><div class="g-overlay">🔍</div></div>
+            <div class="gitem reveal" data-brans="yuzme" onclick="openLb(this)"><img src="yuzme3.jpg" alt="DPÜ Yüzme"><div class="g-overlay">🔍</div></div>
+            <div class="gitem reveal" data-brans="yuzme" onclick="openLb(this)"><img src="yuzme4.jpg" alt="DPÜ Yüzme"><div class="g-overlay">🔍</div></div>
+            <div class="gitem reveal" data-brans="yuzme" onclick="openLb(this)"><img src="yuzme5.jpg" alt="DPÜ Yüzme Sporcuları"><div class="g-overlay">🔍</div></div>
+            <div class="gitem reveal" data-brans="yuzme" onclick="openLb(this)"><img src="yuzme6.jpg" alt="DPÜ Yüzme Antrenmanı"><div class="g-overlay">🔍</div></div>
+            <div class="gitem reveal" data-brans="yuzme" onclick="openLb(this)"><img src="yuzme7.jpg" alt="DPÜ Yüzme Sporcuları"><div class="g-overlay">🔍</div></div>
+            <div class="gitem reveal" data-brans="yuzme" onclick="openLb(this)"><img src="yuzme8.jpg" alt="DPÜ Yüzme Çalışması"><div class="g-overlay">🔍</div></div>
+            <div class="gitem reveal" data-brans="basketbol"><div class="gplaceholder" style="background:linear-gradient(135deg,#c8102e,#ff6b35)"><div class="gico">🏀</div><span>Fotoğraf Eklenecek</span></div></div>
+            <div class="gitem reveal" data-brans="voleybol"><div class="gplaceholder" style="background:linear-gradient(135deg,#0d1b3e,#1a3a6e)"><div class="gico">🏐</div><span>Fotoğraf Eklenecek</span></div></div>
+            <div class="gitem reveal" data-brans="tenis"><div class="gplaceholder" style="background:linear-gradient(135deg,#2e7d32,#66bb6a)"><div class="gico">🎾</div><span>Fotoğraf Eklenecek</span></div></div>
+            <div class="gitem reveal" data-brans="masatenisi"><div class="gplaceholder" style="background:linear-gradient(135deg,#6a1b9a,#ab47bc)"><div class="gico">🏓</div><span>Fotoğraf Eklenecek</span></div></div>
+            <div class="gitem reveal" data-brans="pilates"><div class="gplaceholder" style="background:linear-gradient(135deg,#004d40,#26a69a)"><div class="gico">🧘</div><span>Fotoğraf Eklenecek</span></div></div>
+            <div class="gitem reveal" data-brans="zumba"><div class="gplaceholder" style="background:linear-gradient(135deg,#880e4f,#f06292)"><div class="gico">💃</div><span>Fotoğraf Eklenecek</span></div></div>
+            <div class="gitem reveal" data-brans="jimnastik"><div class="gplaceholder" style="background:linear-gradient(135deg,#3a0068,#9c4dcc)"><div class="gico">🤸</div><span>Fotoğraf Eklenecek</span></div></div>
         </div>
         <div class="ig-cta">
             <p>Daha fazla fotoğraf ve video için Instagram'ı takip edin!</p>
             <a href="https://www.instagram.com/dpusporkulubu" target="_blank" class="btn-ig-big">📷 @dpusporkulubu'nu Takip Et</a>
+        </div>
+    </div>
+</section>
+
+<!-- S.S.S -->
+<section id="sss" style="background:#f8f9fa;padding:5rem 2rem;">
+    <div class="container">
+        <div class="sec-head">
+            <div class="sec-tag">Merak Edilenler</div>
+            <h2 class="sec-title">Sıkça Sorulan <span class="accent">Sorular</span></h2>
+            <div class="sec-line"></div>
+        </div>
+        <div style="max-width:800px;margin:0 auto;" id="sssContainer">
+            <div class="sss-item reveal">
+                <div class="sss-q" onclick="toggleSss(this)">
+                    <span>Kayıt olmak için ne yapmalıyım?</span>
+                    <span class="sss-icon">+</span>
+                </div>
+                <div class="sss-a">Sitemizde yer alan İletişim formunu doldurabilir, ya da doğrudan 0538 073 88 64 numaralı hattı arayabilirsiniz. Antrenörlerimiz size en uygun programı belirlemek için yardımcı olacaktır.</div>
+            </div>
+            <div class="sss-item reveal">
+                <div class="sss-q" onclick="toggleSss(this)">
+                    <span>Kaç yaşından itibaren kayıt yapılabiliyor?</span>
+                    <span class="sss-icon">+</span>
+                </div>
+                <div class="sss-a">Branşa göre değişmekle birlikte genel olarak 5 yaş ve üzeri bireyler kayıt yaptırabilmektedir. Yüzme ve jimnastik branşlarında daha küçük yaş grupları için de özel programlar mevcuttur.</div>
+            </div>
+            <div class="sss-item reveal">
+                <div class="sss-q" onclick="toggleSss(this)">
+                    <span>Antrenmanlar nerede yapılıyor?</span>
+                    <span class="sss-icon">+</span>
+                </div>
+                <div class="sss-a">Tüm antrenmanlar Dumlupınar Üniversitesi Evliya Çelebi Yerleşkesi'nde yer alan tesislerde gerçekleştirilmektedir. Yüzme için olimpik havuz, diğer branşlar için çok amaçlı spor salonu ve özel stüdyolar kullanılmaktadır.</div>
+            </div>
+            <div class="sss-item reveal">
+                <div class="sss-q" onclick="toggleSss(this)">
+                    <span>Ücretler ne kadar?</span>
+                    <span class="sss-icon">+</span>
+                </div>
+                <div class="sss-a">Ücretler branşa ve programa göre farklılık göstermektedir. Güncel ücret tarifesi ve kampanyalar için 0538 073 88 64 numaralı hattı arayarak bilgi alabilirsiniz.</div>
+            </div>
+            <div class="sss-item reveal">
+                <div class="sss-q" onclick="toggleSss(this)">
+                    <span>DPÜ öğrencisi olmak şart mı?</span>
+                    <span class="sss-icon">+</span>
+                </div>
+                <div class="sss-a">Hayır, DPÜ öğrencisi olmanıza gerek yoktur. Kulübümüz Kütahya'da yaşayan herkese açıktır. Çocuklar, gençler ve yetişkinler dahil tüm yaş grupları kayıt yaptırabilir.</div>
+            </div>
+            <div class="sss-item reveal">
+                <div class="sss-q" onclick="toggleSss(this)">
+                    <span>Antrenörler profesyonel mi?</span>
+                    <span class="sss-icon">+</span>
+                </div>
+                <div class="sss-a">Evet. Tüm antrenörlerimiz branşlarında lisanslı ve deneyimlidir. Kulübümüz DPÜ Spor Bilimleri Fakültesi akademisyenlerinin gözetiminde faaliyet göstermektedir.</div>
+            </div>
+            <div class="sss-item reveal">
+                <div class="sss-q" onclick="toggleSss(this)">
+                    <span>Birden fazla branşa yazılabilir miyim?</span>
+                    <span class="sss-icon">+</span>
+                </div>
+                <div class="sss-a">Evet, uygun programlar dahilinde birden fazla branşa kayıt yaptırabilirsiniz. Antrenman takvimlerimiz bu durumu göz önünde bulundurarak hazırlanmıştır.</div>
+            </div>
         </div>
     </div>
 </section>
@@ -1696,6 +1873,28 @@ window.addEventListener('scroll',()=>{
 });
 
 // ── HAMBURGER ──
+function filterGaleri(brans, btn){
+  document.querySelectorAll('.galeri-filter').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('#galeriGrid .gitem').forEach(item=>{
+    if(brans==='tumu'||item.dataset.brans===brans){
+      item.classList.remove('hidden');
+    } else {
+      item.classList.add('hidden');
+    }
+  });
+}
+function toggleSss(el){
+  const isOpen = el.classList.contains('open');
+  document.querySelectorAll('.sss-q').forEach(q=>{
+    q.classList.remove('open');
+    q.nextElementSibling.classList.remove('open');
+  });
+  if(!isOpen){
+    el.classList.add('open');
+    el.nextElementSibling.classList.add('open');
+  }
+}
 function toggleMenu(){
     document.getElementById('navLinks').classList.toggle('open');
     document.getElementById('ham').classList.toggle('open');
