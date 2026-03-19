@@ -333,13 +333,15 @@
         .about-wrap{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;}
         .about-left{}
         .about-card-main{
-            background:var(--navy);border-radius:24px;padding:2.5rem;color:#fff;
+            border-radius:24px;padding:2.5rem;color:#fff;
             text-align:center;position:relative;overflow:hidden;margin-bottom:1rem;
+            min-height:220px;display:flex;flex-direction:column;align-items:center;justify-content:center;
         }
-        .about-card-main::before{content:'';position:absolute;top:-40px;right:-40px;width:160px;height:160px;background:var(--red);border-radius:50%;opacity:.12;}
-        .about-card-main .card-circle{width:80px;height:80px;background:var(--red);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.5rem;font-weight:900;color:#fff;border:2px solid var(--gold);margin:0 auto 1rem;}
-        .about-card-main h3{font-size:1.1rem;margin-bottom:.4rem;}
-        .about-card-main p{font-size:.83rem;color:rgba(255,255,255,.55);line-height:1.7;}
+        .about-card-main img.acm-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;}
+        .about-card-main::after{content:'';position:absolute;inset:0;background:rgba(13,27,62,.72);z-index:1;}
+        .about-card-main .card-circle{width:80px;height:80px;background:var(--red);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.5rem;font-weight:900;color:#fff;border:2px solid var(--gold);margin:0 auto 1rem;position:relative;z-index:2;}
+        .about-card-main h3{font-size:1.1rem;margin-bottom:.4rem;position:relative;z-index:2;}
+        .about-card-main p{font-size:.83rem;color:rgba(255,255,255,.75);line-height:1.7;position:relative;z-index:2;}
         .about-minis{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;}
         .mini{background:#fff;border-radius:14px;padding:1.2rem;text-align:center;box-shadow:0 4px 20px rgba(0,0,0,.07);}
         .mini .ico{font-size:1.6rem;margin-bottom:.4rem;}
@@ -348,20 +350,18 @@
         .about-right h2{font-size:1.9rem;font-weight:900;color:var(--navy);margin-bottom:1.2rem;line-height:1.2;}
         .about-right h2 .accent{color:var(--red);}
         .about-right p{color:var(--muted);line-height:1.85;font-size:.92rem;margin-bottom:.9rem;}
-        /* Tarihçe Timeline – mini strip */
-        .tarihce{margin-top:1.8rem;}
+        /* Tarihçe Timeline – kart tasarımı */
+        .tarihce{margin-top:2rem;}
         .tarihce-title{text-align:center;font-size:1rem;font-weight:800;color:var(--navy);margin-bottom:.2rem;}
         .tarihce-title .accent{color:var(--primary);}
-        .tarihce-line-wrap{display:flex;flex-direction:row;flex-wrap:nowrap;gap:0;margin-top:1rem;justify-content:center;overflow-x:auto;padding-bottom:.3rem;}
-        .tarihce-line-wrap::before{display:none;}
-        .t-item{display:flex;flex-direction:column;align-items:center;gap:.25rem;position:relative;flex:1;min-width:90px;max-width:130px;padding:.4rem .3rem;border-right:1px solid #e0e0e0;}
-        .t-item:last-child{border-right:none;}
-        .t-item:nth-child(odd),.t-item:nth-child(even){flex-direction:column;}
-        .t-item:nth-child(odd) .t-box,.t-item:nth-child(even) .t-box{text-align:center;margin:0;}
-        .t-dot{position:static;transform:none;width:8px;height:8px;background:var(--primary);border:2px solid #fff;border-radius:50%;box-shadow:0 0 0 2px var(--primary);}
-        .t-year{font-size:.85rem;font-weight:900;color:var(--primary);line-height:1;}
-        .t-desc{font-size:.65rem;color:var(--muted);line-height:1.4;margin-top:.1rem;}
-        .t-box{max-width:120px;}
+        .tarihce-line-wrap{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem;margin-top:1.2rem;}
+        .t-item{background:#fff;border-radius:16px;padding:1.2rem 1rem;box-shadow:0 4px 18px rgba(0,0,0,.08);border-top:4px solid var(--primary);text-align:center;transition:.3s;}
+        .t-item:hover{transform:translateY(-4px);box-shadow:0 10px 30px rgba(0,0,0,.13);}
+        .t-dot{display:none;}
+        .t-year{font-size:1.1rem;font-weight:900;color:var(--primary);margin-bottom:.5rem;}
+        .t-desc{font-size:.78rem;color:var(--muted);line-height:1.55;}
+        @media(max-width:900px){.tarihce-line-wrap{grid-template-columns:repeat(3,1fr);}}
+        @media(max-width:600px){.tarihce-line-wrap{grid-template-columns:repeat(2,1fr);}}
         /* Vizyon Misyon */
         .vizyon-wrap{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin-top:1.5rem;}
         .vm-card{background:#fff;border-radius:14px;padding:1.3rem 1.5rem;box-shadow:0 4px 24px rgba(0,0,0,.07);border-top:4px solid var(--primary);position:relative;overflow:hidden;}
@@ -837,6 +837,7 @@
         <div class="about-wrap">
             <div class="about-left reveal">
                 <div class="about-card-main">
+                    <img src="takim-foto.jpg" alt="DPÜ Spor Kulübü Takım" class="acm-bg" loading="lazy">
                     <div class="card-circle">DPÜ</div>
                     <h3>DPÜ Spor Kulübü</h3>
                     <p>Dumlupınar Üniversitesi Spor Bilimleri Fakültesi akademisyenlerinin gözetiminde, Kütahya'nın en kapsamlı spor eğitim merkezi.</p>
