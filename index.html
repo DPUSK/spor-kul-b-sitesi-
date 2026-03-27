@@ -751,17 +751,19 @@
         .brans-card{cursor:pointer;}
         #brans-modal{
             position:fixed;inset:0;background:rgba(0,0,0,.72);z-index:5000;
-            display:none;align-items:center;justify-content:center;padding:1rem;
+            display:none;align-items:flex-start;justify-content:center;
+            padding:4rem 1rem 1rem;overflow-y:auto;
         }
         #brans-modal.open{display:flex;}
         .bm-box{
             background:#fff;border-radius:20px;overflow:hidden;
             width:100%;max-width:460px;
             box-shadow:0 24px 70px rgba(0,0,0,.4);
-            animation:bmPop .22s ease;position:relative;
+            position:relative;
+            animation:bmPop .22s ease forwards;
         }
-        @keyframes bmPop{from{transform:scale(.9);opacity:0;}to{transform:scale(1);opacity:1;}}
-        .bm-img{width:100%;height:200px;object-fit:cover;display:block;}
+        @keyframes bmPop{from{opacity:0;transform:scale(.9);}to{opacity:1;transform:scale(1);}}
+        .bm-img{width:100%;height:220px;object-fit:cover;display:block;}
         .bm-close{
             position:absolute;top:10px;right:12px;
             background:rgba(0,0,0,.5);color:#fff;border:none;
@@ -798,7 +800,7 @@
     <div class="loader-particle" style="width:9px;height:9px;background:#fff;left:85%;animation-delay:.6s;animation-duration:3s;"></div>
     <div class="loader-particle" style="width:4px;height:4px;background:#f0c040;left:60%;animation-delay:1s;animation-duration:2.7s;"></div>
     <!-- Logo -->
-    <div class="loader-logo"><img src="images/kurumsal amblem.png" alt="DPÜ" style="width:80px;height:80px;object-fit:contain;border-radius:50%;"></div>
+    <div class="loader-logo"><img src="images/kurumsal amblem.png" alt="DPÜ Spor Kulübü Amblemi" style="width:80px;height:80px;object-fit:contain;border-radius:50%;"></div>
     <!-- Spor ikonları -->
     <div class="loader-icons">
         <span class="lic" style="animation-delay:.1s">🏊</span>
@@ -922,7 +924,7 @@
             <div class="about-left reveal">
                 <div class="about-card-main">
                     <img src="images/takim-foto.jpg" alt="DPÜ Spor Kulübü Takım" class="acm-bg" loading="lazy">
-                    <div class="card-circle"><img src="images/kurumsal amblem.png" alt="DPÜ" style="width:100%;height:100%;object-fit:contain;border-radius:50%;"></div>
+                    <div class="card-circle"><img src="images/kurumsal amblem.png" alt="DPÜ Spor Kulübü Amblemi" style="width:100%;height:100%;object-fit:contain;border-radius:50%;"></div>
                     <h3>DPÜ Spor Kulübü</h3>
                     <p>Dumlupınar Üniversitesi Spor Bilimleri Fakültesi akademisyenlerinin gözetiminde, Kütahya'nın en kapsamlı Beden Eğitimi ve Spor merkezi.</p>
                 </div>
@@ -1631,7 +1633,7 @@
         </div>
         <div class="tesis-brans-grid">
             <div class="tesis-brans-card reveal" onclick="openTesis('yuzme')">
-                <img src="images/yuzme1.jpg" alt="Yüzme" loading="lazy">
+                <img src="images/yuzme1.jpg" alt="DPÜ Spor Kulübü Yüzme Havuzu" loading="lazy">
                 <div class="tesis-brans-overlay">
                     <div class="tesis-brans-ico">🏊</div>
                     <div class="tesis-brans-name">Yüzme</div>
@@ -1639,7 +1641,7 @@
                 </div>
             </div>
             <div class="tesis-brans-card reveal" onclick="openTesis('basketbol')">
-                <img src="images/basketbol1.jpg" alt="Basketbol" loading="lazy">
+                <img src="images/basketbol1.jpg" alt="DPÜ Spor Kulübü Basketbol Salonu" loading="lazy">
                 <div class="tesis-brans-overlay">
                     <div class="tesis-brans-ico">🏀</div>
                     <div class="tesis-brans-name">Basketbol</div>
@@ -1655,7 +1657,7 @@
                 </div>
             </div>
             <div class="tesis-brans-card reveal" onclick="openTesis('tenis')">
-                <img src="images/tenis-kapali.jpg" alt="Tenis" loading="lazy">
+                <img src="images/tenis-kapali.jpg" alt="DPÜ Spor Kulübü Kapalı Tenis Kortu" loading="lazy">
                 <div class="tesis-brans-overlay">
                     <div class="tesis-brans-ico">🎾</div>
                     <div class="tesis-brans-name">Tenis</div>
@@ -1663,7 +1665,7 @@
                 </div>
             </div>
             <div class="tesis-brans-card reveal" onclick="openTesis('pilates')">
-                <img src="images/pilates.jpg" alt="Pilates" loading="lazy">
+                <img src="images/pilates.jpg" alt="DPÜ Spor Kulübü Pilates Salonu" loading="lazy">
                 <div class="tesis-brans-overlay">
                     <div class="tesis-brans-ico">🧘</div>
                     <div class="tesis-brans-name">Pilates</div>
@@ -1671,7 +1673,7 @@
                 </div>
             </div>
             <div class="tesis-brans-card reveal" onclick="openTesis('zumba')">
-                <img src="images/zumba.jpg" alt="Zumba" loading="lazy">
+                <img src="images/zumba.jpg" alt="DPÜ Spor Kulübü Zumba Salonu" loading="lazy">
                 <div class="tesis-brans-overlay">
                     <div class="tesis-brans-ico">💃</div>
                     <div class="tesis-brans-name">Zumba</div>
@@ -1679,7 +1681,7 @@
                 </div>
             </div>
             <div class="tesis-brans-card reveal" onclick="openTesis('jimnastik')">
-                <img src="images/jimnastik.jpg" alt="Jimnastik" loading="lazy">
+                <img src="images/jimnastik.jpg" alt="DPÜ Spor Kulübü Jimnastik Salonu" loading="lazy">
                 <div class="tesis-brans-overlay">
                     <div class="tesis-brans-ico">🤸</div>
                     <div class="tesis-brans-name">Jimnastik</div>
@@ -1687,7 +1689,7 @@
                 </div>
             </div>
             <div class="tesis-brans-card reveal" onclick="openTesis('masatenisi')">
-                <img src="images/basketbol2.jpg" alt="Masa Tenisi" loading="lazy">
+                <img src="images/basketbol2.jpg" alt="DPÜ Spor Kulübü Masa Tenisi Salonu" loading="lazy">
                 <div class="tesis-brans-overlay">
                     <div class="tesis-brans-ico">🏓</div>
                     <div class="tesis-brans-name">Masa Tenisi</div>
@@ -2247,6 +2249,40 @@ _DPÜ Spor Kulübü web sitesi üzerinden gönderildi._`;
     },600);
 }
 
+// ── WHATSAPP BUTONU BRANŞA GÖRE GÜNCELLE ──
+(function(){
+  const NUM = '905064797710';
+  const VARSAYILAN = 'Merhaba, DPÜ Spor Kulübü hakkında bilgi almak istiyorum.';
+  const BRANS_MESAJ = {
+    yuzme:      'Merhaba, DPÜ Spor Kulübü Yüzme branşı kayıt ve antrenman bilgisi almak istiyorum.',
+    basketbol:  'Merhaba, DPÜ Spor Kulübü Basketbol branşı kayıt ve antrenman bilgisi almak istiyorum.',
+    voleybol:   'Merhaba, DPÜ Spor Kulübü Voleybol branşı kayıt ve antrenman bilgisi almak istiyorum.',
+    tenis:      'Merhaba, DPÜ Spor Kulübü Tenis branşı kayıt ve antrenman bilgisi almak istiyorum.',
+    masatenisi: 'Merhaba, DPÜ Spor Kulübü Masa Tenisi branşı kayıt ve antrenman bilgisi almak istiyorum.',
+    pilates:    'Merhaba, DPÜ Spor Kulübü Pilates branşı kayıt ve antrenman bilgisi almak istiyorum.',
+    zumba:      'Merhaba, DPÜ Spor Kulübü Zumba branşı kayıt ve antrenman bilgisi almak istiyorum.',
+    jimnastik:  'Merhaba, DPÜ Spor Kulübü Jimnastik branşı kayıt ve antrenman bilgisi almak istiyorum.',
+  };
+  const btn = document.getElementById('wp-fab-btn');
+  if (!btn) return;
+
+  function wpUrl(metin) {
+    return 'https://wa.me/' + NUM + '?text=' + encodeURIComponent(metin);
+  }
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const brans = entry.target.dataset.brans;
+        const metin = BRANS_MESAJ[brans] || VARSAYILAN;
+        btn.href = wpUrl(metin);
+      }
+    });
+  }, { threshold: 0.3 });
+
+  document.querySelectorAll('[data-brans]').forEach(el => observer.observe(el));
+})();
+
 // ── ANTRENÖR FOTOĞRAF AVATARLARI ──
 (function(){
   const colors = ['#0066cc','#b71c1c','#1b5e20','#880e4f','#4a148c','#e65100','#006064','#37474f'];
@@ -2289,7 +2325,7 @@ _DPÜ Spor Kulübü web sitesi üzerinden gönderildi._`;
 
 <!-- WhatsApp Sabit Butonu -->
 <a href="https://wa.me/905064797710?text=Merhaba%2C%20DPÜ%20Spor%20Kulübü%20hakkında%20bilgi%20almak%20istiyorum."
-   target="_blank" class="wp-fab" aria-label="WhatsApp ile iletişim">
+   target="_blank" class="wp-fab" id="wp-fab-btn" aria-label="WhatsApp ile iletişim">
     <svg viewBox="0 0 32 32" width="28" height="28" fill="white">
         <path d="M16 0C7.163 0 0 7.163 0 16c0 2.822.736 5.471 2.027 7.774L0 32l8.486-2.003A15.93 15.93 0 0016 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm0 29.333a13.27 13.27 0 01-6.77-1.848l-.485-.288-5.036 1.188 1.218-4.899-.317-.503A13.267 13.267 0 012.667 16C2.667 8.637 8.637 2.667 16 2.667S29.333 8.637 29.333 16 23.363 29.333 16 29.333zm7.27-9.878c-.398-.199-2.354-1.162-2.719-1.294-.365-.133-.63-.199-.896.199-.266.398-1.029 1.294-1.261 1.56-.232.265-.465.298-.863.1-.398-.2-1.681-.62-3.203-1.977-1.184-1.056-1.983-2.36-2.215-2.758-.232-.398-.025-.613.174-.811.179-.178.398-.465.597-.697.2-.232.266-.398.398-.664.133-.265.067-.497-.033-.697-.1-.199-.896-2.16-1.228-2.957-.323-.776-.651-.671-.896-.683l-.763-.013c-.266 0-.697.1-1.062.497-.365.398-1.394 1.362-1.394 3.322s1.427 3.853 1.627 4.12c.199.265 2.808 4.286 6.806 6.012.951.41 1.693.655 2.272.839.954.303 1.823.26 2.51.158.765-.114 2.354-.962 2.687-1.891.332-.93.332-1.727.232-1.891-.099-.166-.365-.265-.763-.464z"/>
     </svg>
