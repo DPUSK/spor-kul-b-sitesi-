@@ -506,7 +506,7 @@
         .antrenor-row{display:flex;align-items:center;justify-content:space-between;padding:.7rem 1.2rem;border-bottom:1px solid #f0f0f0;gap:.5rem;}
         .antrenor-row:last-child{border-bottom:none;}
         .antrenor-row-left{display:flex;align-items:center;gap:.7rem;}
-        .antrenor-foto{width:68px;height:68px;border-radius:50%;object-fit:cover;flex-shrink:0;border:2px solid #e8e8e8;}
+        .antrenor-foto{width:68px;height:68px;border-radius:50%;object-fit:cover;object-position:center top;flex-shrink:0;border:2px solid #e8e8e8;}
         .antrenor-foto-fallback{width:68px;height:68px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:1.1rem;font-weight:800;color:#fff;letter-spacing:-.5px;}
         .antrenor-row-name{font-size:.9rem;font-weight:700;color:var(--navy);}
         .antrenor-row-role{font-size:.72rem;color:var(--red);font-weight:600;text-align:right;white-space:nowrap;}
@@ -1192,69 +1192,45 @@
                         <td>–</td>
                         <td>–</td>
                         <td>–</td>
-                        <td><span class="time-chip">18:30</span></td>
-                        <td><span class="time-chip">14:30–17:30</span></td>
-                        <td><span class="time-chip">14:30–17:30</span></td>
+                        <td><span class="time-chip">18:30–20:00</span> <small style="color:#aaa;font-size:.65rem;">Takım</small></td>
+                        <td><span class="time-chip">14:30–15:30</span> <small style="color:#aaa;font-size:.65rem;">Temel</small><br><span class="time-chip">15:30–16:30</span> <small style="color:#aaa;font-size:.65rem;">Temel</small></td>
+                        <td><span class="time-chip">14:30–15:30</span> <small style="color:#aaa;font-size:.65rem;">Temel</small><br><span class="time-chip">15:30–16:30</span> <small style="color:#aaa;font-size:.65rem;">Temel</small></td>
                     </tr>
                     <tr>
                         <td><div class="flex-row"><div class="dot" style="background:#0d1b3e"></div>🏐 Voleybol</div></td>
                         <td>–</td>
-                        <td><span class="time-chip">17:00</span></td>
                         <td>–</td>
-                        <td><span class="time-chip">17:00</span></td>
+                        <td><span class="time-chip">18:30–19:30</span> <small style="color:#aaa;font-size:.65rem;">Takım</small></td>
                         <td>–</td>
-                        <td><span class="time-chip">10:00</span></td>
                         <td>–</td>
+                        <td><span class="time-chip">11:00–12:00</span> <small style="color:#aaa;font-size:.65rem;">Temel</small><br><span class="time-chip">12:00–13:00</span> <small style="color:#aaa;font-size:.65rem;">Temel</small><br><span class="time-chip">13:00–14:30</span> <small style="color:#aaa;font-size:.65rem;">Takım</small></td>
+                        <td><span class="time-chip">11:00–12:00</span> <small style="color:#aaa;font-size:.65rem;">Temel</small><br><span class="time-chip">12:00–13:00</span> <small style="color:#aaa;font-size:.65rem;">Temel</small><br><span class="time-chip">13:00–14:30</span> <small style="color:#aaa;font-size:.65rem;">Takım</small></td>
                     </tr>
                     <tr>
                         <td><div class="flex-row"><div class="dot" style="background:#2e7d32"></div>🎾 Tenis</div></td>
-                        <td><span class="time-chip">10:00</span></td>
-                        <td><span class="time-chip">10:00</span></td>
-                        <td><span class="time-chip">10:00</span></td>
-                        <td><span class="time-chip">10:00</span></td>
-                        <td><span class="time-chip">10:00</span></td>
-                        <td>–</td>
-                        <td>–</td>
+                        <td colspan="7" style="text-align:center;color:#2e7d32;font-size:.8rem;font-weight:600;letter-spacing:.3px;">Antrenman saatleri sporcu ve antrenör müsaitliğine göre kişisel olarak planlanmaktadır. Bilgi için iletişime geçiniz.</td>
                     </tr>
                     <tr>
                         <td><div class="flex-row"><div class="dot" style="background:#6a1b9a"></div>🏓 Masa Tenisi</div></td>
-                        <td>–</td>
-                        <td><span class="time-chip">14:00</span></td>
-                        <td>–</td>
-                        <td><span class="time-chip">14:00</span></td>
-                        <td>–</td>
-                        <td><span class="time-chip">11:00</span></td>
-                        <td>–</td>
+                        <td colspan="7" style="text-align:center;color:#6a1b9a;font-size:.8rem;font-weight:600;letter-spacing:.3px;">Antrenman saatleri sporcu ve antrenör müsaitliğine göre kişisel olarak planlanmaktadır. Bilgi için iletişime geçiniz.</td>
                     </tr>
                     <tr>
                         <td><div class="flex-row"><div class="dot" style="background:#ad1457"></div>🧘 Pilates</div></td>
-                        <td><span class="time-chip">11:00</span></td>
-                        <td>–</td>
-                        <td><span class="time-chip">11:00</span></td>
-                        <td>–</td>
-                        <td><span class="time-chip">11:00</span></td>
-                        <td>–</td>
-                        <td>–</td>
+                        <td colspan="7" style="text-align:center;color:#ad1457;font-size:.8rem;font-weight:600;letter-spacing:.3px;">Antrenman saatleri sporcu ve antrenör müsaitliğine göre kişisel olarak planlanmaktadır. Bilgi için iletişime geçiniz.</td>
                     </tr>
                     <tr>
                         <td><div class="flex-row"><div class="dot" style="background:#e65100"></div>💃 Zumba</div></td>
-                        <td>–</td>
-                        <td><span class="time-chip">18:00</span></td>
-                        <td>–</td>
-                        <td><span class="time-chip">18:00</span></td>
-                        <td>–</td>
-                        <td>–</td>
-                        <td>–</td>
+                        <td colspan="7" style="text-align:center;color:#e65100;font-size:.8rem;font-weight:600;letter-spacing:.3px;">Antrenman saatleri sporcu ve antrenör müsaitliğine göre kişisel olarak planlanmaktadır. Bilgi için iletişime geçiniz.</td>
                     </tr>
                     <tr>
                         <td><div class="flex-row"><div class="dot" style="background:#00695c"></div>🤸 Jimnastik</div></td>
-                        <td><span class="time-chip">16:00–18:00</span></td>
                         <td>–</td>
-                        <td><span class="time-chip">16:00–18:00</span></td>
                         <td>–</td>
-                        <td><span class="time-chip">16:00–18:00</span></td>
-                        <td><span class="time-chip">10:00–12:00</span></td>
+                        <td><span class="time-chip">19:00</span> <small style="color:#aaa;font-size:.65rem;">Performans</small></td>
+                        <td><span class="time-chip">19:00</span> <small style="color:#aaa;font-size:.65rem;">Performans</small></td>
                         <td>–</td>
+                        <td><span class="time-chip">11:00</span> <small style="color:#aaa;font-size:.65rem;">BabyGym 18-36 ay</small><br><span class="time-chip">12:00</span> <small style="color:#aaa;font-size:.65rem;">3-5 Yaş</small><br><span class="time-chip">13:00</span> <small style="color:#aaa;font-size:.65rem;">3-5 Yaş</small><br><span class="time-chip">14:00</span> <small style="color:#aaa;font-size:.65rem;">6-9 Yaş</small><br><span class="time-chip">15:00</span> <small style="color:#aaa;font-size:.65rem;">Performans</small></td>
+                        <td><span class="time-chip">12:00</span> <small style="color:#aaa;font-size:.65rem;">3-5 Yaş</small><br><span class="time-chip">13:00</span> <small style="color:#aaa;font-size:.65rem;">3-5 Yaş</small><br><span class="time-chip">14:00</span> <small style="color:#aaa;font-size:.65rem;">6-9 Yaş</small><br><span class="time-chip">15:00</span> <small style="color:#aaa;font-size:.65rem;">Performans</small></td>
                     </tr>
                 </tbody>
             </table>
@@ -1536,7 +1512,9 @@
             <div class="gitem reveal" data-brans="yuzme" onclick="openLb(this)"><img src="images/yuzme8.jpg" alt="DPÜ Yüzme Çalışması"><div class="g-overlay">🔍</div></div>
             <div class="gitem reveal" data-brans="basketbol"><div class="gplaceholder" style="background:linear-gradient(135deg,#c8102e,#ff6b35)"><div class="gico">🏀</div><span>Yakında</span></div></div>
             <div class="gitem reveal" data-brans="voleybol"><div class="gplaceholder" style="background:linear-gradient(135deg,#0d1b3e,#1a3a6e)"><div class="gico">🏐</div><span>Yakında</span></div></div>
-            <div class="gitem reveal" data-brans="tenis"><div class="gplaceholder" style="background:linear-gradient(135deg,#2e7d32,#66bb6a)"><div class="gico">🎾</div><span>Yakında</span></div></div>
+            <div class="gitem reveal" data-brans="tenis" onclick="openLb(this)"><img src="images/tenis foto.jpeg" alt="DPÜ Tenis" loading="lazy"><div class="g-overlay">🔍</div></div>
+            <div class="gitem reveal" data-brans="tenis" onclick="openLb(this)"><img src="images/WhatsApp Image 2026-03-30 at 14.51.32.jpeg" alt="DPÜ Tenis" loading="lazy"><div class="g-overlay">🔍</div></div>
+            <div class="gitem reveal" data-brans="tenis" onclick="openLb(this)"><img src="images/WhatsApp Image 2026-03-30 at 14.51.33.jpeg" alt="DPÜ Tenis" loading="lazy"><div class="g-overlay">🔍</div></div>
             <div class="gitem reveal" data-brans="masatenisi"><div class="gplaceholder" style="background:linear-gradient(135deg,#6a1b9a,#ab47bc)"><div class="gico">🏓</div><span>Yakında</span></div></div>
             <div class="gitem reveal" data-brans="pilates"><div class="gplaceholder" style="background:linear-gradient(135deg,#004d40,#26a69a)"><div class="gico">🧘</div><span>Yakında</span></div></div>
             <div class="gitem reveal" data-brans="zumba"><div class="gplaceholder" style="background:linear-gradient(135deg,#880e4f,#f06292)"><div class="gico">💃</div><span>Yakında</span></div></div>
@@ -1558,68 +1536,71 @@
             <div class="sec-line"></div>
         </div>
         <div class="yorumlar-grid">
-            <div class="yorum-card reveal">
+            <!-- Yüzme -->
+            <div class="yorum-card reveal" onclick="window.open('https://www.instagram.com/p/DWernT6AMMB/','_blank')" style="cursor:pointer;">
                 <div class="yorum-ig-header">
-                    <div class="yorum-avatar">O</div>
-                    <div class="yorum-user"><strong>@ozkanhayvanci</strong><span>Instagram · @dpusk.yuzme gönderisi</span></div>
+                    <div class="yorum-avatar" style="background:linear-gradient(135deg,#0066cc,#42a5f5);">B</div>
+                    <div class="yorum-user"><strong>@banu_ozcann</strong><span>Instagram · @dpusk.yuzme gönderisi</span></div>
                     <div class="yorum-ig-logo">📸</div>
                 </div>
                 <div class="yorum-stars">★★★★★</div>
-                <p class="yorum-text">Kızımız Kayra kulübün amblemini kendi elleriyle çizdi ve hediye etti. Bu kulüp bizim için sadece bir spor yeri değil, ikinci bir aile oldu. Emekleri için teşekkür ederiz. 👏❤️</p>
+                <p class="yorum-text">Eğlence ve eğitimi bir arada sunan hocalarımız sayesinde, dersler çok keyifli ve verimli geçiyor 🍋🤩 Emekleri için tüm ekibe teşekkürler 💗</p>
                 <span class="yorum-brans">🏊 Yüzme</span>
             </div>
-            <div class="yorum-card reveal">
+            <!-- Voleybol -->
+            <div class="yorum-card reveal" onclick="window.open('https://www.instagram.com/p/DWepDT-iATY/','_blank')" style="cursor:pointer;">
                 <div class="yorum-ig-header">
-                    <div class="yorum-avatar" style="background:linear-gradient(135deg,#1565c0,#42a5f5);">H</div>
-                    <div class="yorum-user"><strong>@h.selma43</strong><span>Instagram · @dpusk.yuzme gönderisi</span></div>
+                    <div class="yorum-avatar" style="background:linear-gradient(135deg,#0d1b3e,#1a3a6e);">N</div>
+                    <div class="yorum-user"><strong>@nursah_arslan_bulut</strong><span>Instagram · @dpusksvoleybol gönderisi</span></div>
                     <div class="yorum-ig-logo">📸</div>
                 </div>
                 <div class="yorum-stars">★★★★★</div>
-                <p class="yorum-text">Yarışma sabahı çocuğumu havuza bıraktığımda gözlerim doldu. DPÜ SK'nın antrenörleri gerçekten özverili, bilimsel bir yaklaşımla çalışıyorlar. Çok şükür böyle bir kulüple tanıştık. 👏👏❤️❤️</p>
-                <span class="yorum-brans">🏊 Yüzme</span>
+                <p class="yorum-text">Kızımın voleybolla bir tanışıklığı vardı ama bu yaz DPÜ Kulübü ile yolları kesişince iş bambaşka bir yere evrildi. Disiplinin yanında sundukları o sıcak ve samimi ortam, çocukların bağ kurmasını öyle güzel sağlıyor ki... Sevmek ne demek, orada yeniden öğrendik. 💗</p>
+                <span class="yorum-brans">🏐 Voleybol</span>
             </div>
-            <div class="yorum-card reveal">
+            <div class="yorum-card reveal" onclick="window.open('https://www.instagram.com/p/DWepDT-iATY/','_blank')" style="cursor:pointer;">
                 <div class="yorum-ig-header">
-                    <div class="yorum-avatar" style="background:linear-gradient(135deg,#2e7d32,#66bb6a);">G</div>
-                    <div class="yorum-user"><strong>@gooksukose</strong><span>Instagram · @dpusk.yuzme gönderisi</span></div>
+                    <div class="yorum-avatar" style="background:linear-gradient(135deg,#1565c0,#42a5f5);">İ</div>
+                    <div class="yorum-user"><strong>@ilknur_can_kaya</strong><span>Instagram · @dpusksvoleybol gönderisi</span></div>
                     <div class="yorum-ig-logo">📸</div>
                 </div>
                 <div class="yorum-stars">★★★★★</div>
-                <p class="yorum-text">Şehir dışı kamp haberini görünce endişelendim ama dönüşte oğlum bana kampta neler öğrendiğini anlatırken gururla dinledim. Kulübün velilere verdiği güven çok önemli. 👏👏👏❤️</p>
-                <span class="yorum-brans">🏊 Yüzme</span>
+                <p class="yorum-text">İzlemesi bu kadar keyifli iken antrenmanın kendisi ne kadar zevklidir kim bilir? 👍👍</p>
+                <span class="yorum-brans">🏐 Voleybol</span>
             </div>
-            <div class="yorum-card reveal">
+            <div class="yorum-card reveal" onclick="window.open('https://www.instagram.com/p/DWepDT-iATY/','_blank')" style="cursor:pointer;">
                 <div class="yorum-ig-header">
-                    <div class="yorum-avatar" style="background:linear-gradient(135deg,#e65100,#ffa726);">E</div>
-                    <div class="yorum-user"><strong>@eminetekin821</strong><span>Instagram · @dpusk.yuzme gönderisi</span></div>
+                    <div class="yorum-avatar" style="background:linear-gradient(135deg,#880e4f,#f06292);">A</div>
+                    <div class="yorum-user"><strong>@_aysumc_</strong><span>Instagram · @dpusksvoleybol gönderisi</span></div>
                     <div class="yorum-ig-logo">📸</div>
                 </div>
                 <div class="yorum-stars">★★★★★</div>
-                <p class="yorum-text">Ne güzel ya! Antrenman videolarını sosyal medyadan takip ediyoruz, her seferinde "ben de katılmak istiyorum" diyorum. Böyle bir kulübün Kütahya'da olması büyük şans.</p>
-                <span class="yorum-brans">🏊 Yüzme</span>
+                <p class="yorum-text">Eğlenceyle birlikte müthiş ve güçlü antrenmanlar 🥊</p>
+                <span class="yorum-brans">🏐 Voleybol</span>
             </div>
-            <div class="yorum-card reveal">
+            <!-- Tenis -->
+            <div class="yorum-card reveal" onclick="window.open('https://www.instagram.com/p/DWPee1EjI0A/','_blank')" style="cursor:pointer;">
                 <div class="yorum-ig-header">
-                    <div class="yorum-avatar" style="background:linear-gradient(135deg,#6a1b9a,#ab47bc);">M</div>
-                    <div class="yorum-user"><strong>@mehmet.2357.f</strong><span>Instagram · @dpusk.yuzme gönderisi</span></div>
+                    <div class="yorum-avatar" style="background:linear-gradient(135deg,#2e7d32,#66bb6a);">B</div>
+                    <div class="yorum-user"><strong>@bilgeturengulurer</strong><span>Instagram · @dpusktenis gönderisi</span></div>
                     <div class="yorum-ig-logo">📸</div>
                 </div>
                 <div class="yorum-stars">★★★★★</div>
-                <p class="yorum-text">Üniversite öğrencisi olarak kursa katıldım, gerçekten profesyonel bir ortam. DPÜ imkânlarını bu şekilde değerlendirmek harika. Antrenörler çok ilgili ve sabırlı.</p>
-                <span class="yorum-brans">🏊 Yüzme</span>
+                <p class="yorum-text">Kızlarımın bu kulübün sporcusu olmasından büyük gurur duyuyorum 💙 Antrenörlerin ilgisi, disiplinli çalışma ortamı ve çocuklara olan yaklaşımları gerçekten çok kıymetli. Herkese kendini aileden biri gibi hissettiren DPÜ Spor Kulübü'ne teşekkür ederiz 🙏</p>
+                <span class="yorum-brans">🎾 Tenis</span>
             </div>
-            <div class="yorum-card reveal">
+            <div class="yorum-card reveal" onclick="window.open('https://www.instagram.com/p/DWPee1EjI0A/','_blank')" style="cursor:pointer;">
                 <div class="yorum-ig-header">
-                    <div class="yorum-avatar" style="background:linear-gradient(135deg,#00695c,#4db6ac);">A</div>
-                    <div class="yorum-user"><strong>@ayselllll_kaptann</strong><span>Instagram · @dpusk.yuzme gönderisi</span></div>
+                    <div class="yorum-avatar" style="background:linear-gradient(135deg,#e65100,#ffa726);">D</div>
+                    <div class="yorum-user"><strong>@durakss</strong><span>Instagram · @dpusktenis gönderisi</span></div>
                     <div class="yorum-ig-logo">📸</div>
                 </div>
                 <div class="yorum-stars">★★★★★</div>
-                <p class="yorum-text">300 kişilik iftar organizasyonunda ailece katıldık. Sadece spor kulübü değil, gerçek bir aile ortamı yaratmışlar. Çocuğumu bu ortama emanet etmekten büyük mutluluk duyuyorum. 🧿🧿🧿</p>
-                <span class="yorum-brans">🏊 Yüzme</span>
+                <p class="yorum-text">Antrenörlerin özverili ve güleryüzlü yaklaşımlarıyla gerçekleştirilen antrenmanları biz aileler de keyifle izleyebiliyoruz, teşekkürler 🤜</p>
+                <span class="yorum-brans">🎾 Tenis</span>
             </div>
         </div>
-        <p style="text-align:center;font-size:.75rem;color:#aaa;margin-top:2rem;">* Yorumlar @dpusk.yuzme Instagram hesabındaki gerçek kullanıcılara aittir.</p>
+        <p style="text-align:center;font-size:.75rem;color:#aaa;margin-top:2rem;">* Yorumlar Instagram'daki gerçek kullanıcı yorumlarıdır. Tıklayarak orijinal gönderiye ulaşabilirsiniz.</p>
     </div>
 </section>
 
@@ -2138,7 +2119,7 @@ const tesisData = {
     yuzme:      [{src:'images/yuzme1.jpg', cap:'Olimpik Yüzme Havuzu'}],
     basketbol:  [{src:'images/basketbol1.jpg', cap:'Basketbol Salonu'}, {src:'images/basketbol2.jpg', cap:'Basketbol Salonu – Yakın'}, {src:'images/basketbol3.jpg', cap:'Ana Spor Salonu'}],
     voleybol:   [{src:'images/basketbol3.jpg', cap:'Voleybol – Ana Spor Salonu'}, {src:'images/basketbol1.jpg', cap:'Voleybol – Salon İçi'}],
-    tenis:      [{src:'images/tenis-kapali.jpg', cap:'Kapalı Tenis Kortları'}, {src:'images/tenis-acik.jpg', cap:'Açık Tenis Kortları'}],
+    tenis:      [{src:'images/tenis-kapali.jpg', cap:'Kapalı Tenis Kortları'}, {src:'images/tenis-acik.jpg', cap:'Açık Tenis Kortları'}, {src:'images/WhatsApp Image 2026-03-30 at 14.51.35 tenis tesis.jpeg', cap:'DPÜ Tenis Kortu'}, {src:'images/WhatsApp Image 2026-03-30 at 14.51.35 tesis.jpeg', cap:'DPÜ Tenis Kortu'}, {src:'images/WhatsApp Image 2026-03-30 at 14.51.36 tesis.jpeg', cap:'DPÜ Tenis Kortu'}, {src:'images/WhatsApp Image 2026-03-30 at 14.51.35.jpeg', cap:'DPÜ Tenis Kortu'}],
     pilates:    [{src:'images/pilates.jpg', cap:'Pilates Reformer Stüdyosu'}],
     zumba:      [{src:'images/zumba.jpg', cap:'Zumba Salonu'}],
     jimnastik:  [{src:'images/jimnastik.jpg', cap:'Jimnastik Salonu'}, {src:'images/trambolin.jpg', cap:'Trambolin Salonu'}],
@@ -2307,6 +2288,16 @@ _DPÜ Spor Kulübü web sitesi üzerinden gönderildi._`;
     img.className = 'antrenor-foto';
     img.alt = name;
     img.src = 'images/antrenor-' + slug + '.jpg';
+    img.style.cursor = 'pointer';
+    img.title = name;
+    img.addEventListener('click', function(){
+      if(this.naturalWidth === 0) return;
+      const m = document.getElementById('antrenor-foto-modal');
+      document.getElementById('antrenor-foto-modal-img').src = this.src;
+      document.getElementById('antrenor-foto-modal-name').textContent = name;
+      m.style.display = 'flex';
+      setTimeout(()=>m.classList.add('acik'),10);
+    });
     img.onerror = function(){
       // Fotoğraf yoksa baş harf avatarı göster
       const fb = document.createElement('div');
@@ -2322,6 +2313,16 @@ _DPÜ Spor Kulübü web sitesi üzerinden gönderildi._`;
   });
 })();
 </script>
+
+<!-- Antrenör Fotoğraf Modal -->
+<div id="antrenor-foto-modal" style="display:none;position:fixed;inset:0;z-index:9998;background:rgba(0,0,0,0.85);align-items:center;justify-content:center;flex-direction:column;gap:12px;transition:opacity .2s;" onclick="this.classList.remove('acik');setTimeout(()=>this.style.display='none',200);">
+  <img id="antrenor-foto-modal-img" src="" alt="" style="max-width:320px;max-height:400px;border-radius:12px;object-fit:cover;object-position:center top;box-shadow:0 8px 40px rgba(0,0,0,0.5);">
+  <div id="antrenor-foto-modal-name" style="color:#fff;font-size:1.1rem;font-weight:700;letter-spacing:.5px;"></div>
+</div>
+<style>
+#antrenor-foto-modal{opacity:0;}
+#antrenor-foto-modal.acik{opacity:1;}
+</style>
 
 <!-- WhatsApp Sabit Butonu -->
 <a href="https://wa.me/905064797710?text=Merhaba%2C%20DPÜ%20Spor%20Kulübü%20hakkında%20bilgi%20almak%20istiyorum."
