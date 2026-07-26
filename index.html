@@ -675,15 +675,7 @@
         .footer-bottom p{font-size:.75rem;color:rgba(255,255,255,.25);}
         .footer-bottom span{color:var(--red);}
 
-        /* ── FLOATING PHONE ── */
-        #floatPhone{
-            position:fixed;bottom:5.5rem;right:2rem;z-index:998;
-            width:52px;height:52px;background:var(--navy2);border-radius:50%;
-            display:flex;align-items:center;justify-content:center;font-size:1.4rem;
-            box-shadow:0 4px 20px rgba(26,58,110,.5);transition:.3s;
-            text-decoration:none;
-        }
-        #floatPhone:hover{transform:scale(1.1);box-shadow:0 6px 25px rgba(26,58,110,.7);}
+        /* Telefon butonu kaldırıldı — yerini sohbet asistanı aldı (sayfa sonundaki script) */
         #backTop{
             position:fixed;bottom:2rem;right:2rem;z-index:998;
             width:52px;height:52px;background:var(--red);border-radius:50%;
@@ -2106,7 +2098,10 @@
 </footer>
 
 <!-- FLOATING BUTTONS -->
-<a href="tel:05064797710" id="floatPhone" title="Ara">📞</a>
+<!-- Sohbet asistanı — telefon butonunun yerini aldı, aynı konumda duruyor.
+     Görünüm/davranış değişikliği için bu dosyaya değil, script'in kendisine bakın:
+     eneskulupproje projesindeki public/sohbet-widget.js -->
+<script src="https://eneskulupproje.vercel.app/sohbet-widget.js" defer></script>
 <button id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Yukarı">↑</button>
 
 <!-- LIGHTBOX -->
@@ -2563,7 +2558,6 @@ _DPÜ Spor Kulübü web sitesi üzerinden gönderildi._`;
 .wp-fab:hover{transform:scale(1.12);box-shadow:0 6px 28px rgba(37,211,102,.7);}
 @media(max-width:600px){
     .wp-fab{bottom:10rem;right:1rem;width:44px;height:44px;}
-    #floatPhone{bottom:6.5rem;right:1rem;width:44px;height:44px;font-size:1.2rem;}
     #backTop{bottom:3rem;right:1rem;width:44px;height:44px;font-size:1rem;}
 }
 </style>
